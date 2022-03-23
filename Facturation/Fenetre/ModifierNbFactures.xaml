@@ -1,0 +1,27 @@
+﻿<Window x:Class="Facturation.Fenetre.ModifierNbFactures"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Facturation.Fenetre"
+        mc:Ignorable="d"
+        Title="ModifierNbFactures" Height="200" Width="400" Background="AliceBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Veuillez saisir la quantité de factures souhaitée" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox Name="txtNbModifier" Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center"></TextBox>
+
+        <Button Content="Modifier" Name="btnModifier" Click="btnModifier_Click" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Height="20" Width="150" Margin="0, 20"></Button>
+
+    </Grid>
+</Window>

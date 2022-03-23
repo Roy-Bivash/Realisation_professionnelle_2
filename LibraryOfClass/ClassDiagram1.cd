@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibraryOfClass.Abonnement">
+    <Position X="8.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAASAAAAEAAAAAAAAAAEAACABAAAigKAA=</HashCode>
+      <FileName>Abonnement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.Client">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAUAAAAEAAAAAAAAAAAAAAAAAAAAEAAAQBAAgE=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.Connexion">
+    <Position X="12.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAARAIAAEAABAAAAAQAAAAgAA=</HashCode>
+      <FileName>Connexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.GstBDD">
+    <Position X="5" Y="0.75" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAACgAgQgIgABCQAABhgMCABEAAAAAAAgAQAAAAEACA=</HashCode>
+      <FileName>GstBDD.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.GstGlobale">
+    <Position X="4.5" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABAAA=</HashCode>
+      <FileName>GstGlobale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.Type_abonnement">
+    <Position X="14.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAAAAAAAAAAIAAAADAAAAAQAQAAAAECAgA=</HashCode>
+      <FileName>Type_abonnement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibraryOfClass.User">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAEAAAQBAAAE=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

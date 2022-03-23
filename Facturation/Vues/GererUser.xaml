@@ -1,0 +1,90 @@
+﻿<Page x:Class="Facturation.Vues.GererUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Facturation.Vues"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1280"
+      Title="GererUser" Background="AliceBlue" Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Content="Actualiser" Click="Button_Click" Grid.Column="0" Grid.Row="1" Width="100" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#A9CCE3"></Button>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Page Gerer les Utilisateurs" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Border Grid.Row="2" Grid.Column="0" Grid.RowSpan="4" BorderThickness="10" BorderBrush="Transparent">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"></TextBlock>
+                <TextBox Name="barDeRecherche" Grid.Column="1" Margin="0, 0, 0, 0" VerticalAlignment="Center" FontSize="16" TextChanged="barDeRecherche_TextChanged"></TextBox>
+                <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="lstBoxUsers" SelectionChanged="lstBoxUsers_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Statut}" Width="50"></TextBlock>
+                                <TextBlock Text="{Binding Identifiant}" Width="120"></TextBlock>
+                                <TextBlock Text="Mail : " Width="auto"></TextBlock>
+                                <TextBlock Text="{Binding Mail}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+
+        <TextBlock Text="Information de selection" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="28"></TextBlock>
+
+        <Border Grid.Column="1" Grid.Row="3" BorderBrush="AntiqueWhite" BorderThickness="5" Padding="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="txtId" Grid.Row="0" FontSize="20"></TextBlock>
+                <TextBlock Name="txtMail" Grid.Row="1" FontSize="20"></TextBlock>
+                <TextBlock Name="txtAbonnement" Grid.Row="2" FontSize="20"></TextBlock>
+                <TextBlock Name="txtDebutAbonnement" Grid.Row="3" FontSize="20"></TextBlock>
+                <TextBlock Name="txtFinAbonnement" Grid.Row="4" FontSize="20"></TextBlock>
+                <TextBlock Name="txtNbDevisRestant" Grid.Row="5" FontSize="20"></TextBlock>
+                <TextBlock Name="txtNbFacturesRestant" Grid.Row="6" FontSize="20"></TextBlock>
+
+                <TextBlock Name="txtGlobale" Grid.Row="0" Grid.RowSpan="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontStyle="Italic"></TextBlock>
+            </Grid>
+        </Border>
+
+        <Button Visibility="Hidden" Name="btnModifierClient" Click="btnModifierClient_Click" Content="Modifier le client" FontSize="15" Grid.Row="4" Grid.Column="1" Margin="10" Width="250" Background="#D1F2EB"></Button>
+
+    </Grid>
+</Page>

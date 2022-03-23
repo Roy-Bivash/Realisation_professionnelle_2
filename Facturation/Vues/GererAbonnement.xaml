@@ -1,0 +1,98 @@
+﻿<Page x:Class="Facturation.Vues.GererAbonnement"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Facturation.Vues"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1280" Background="AliceBlue"
+      Title="GererAbonnement" Loaded="Page_Loaded">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="10"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Button Content="Actualiser" Grid.Column="0" Grid.Row="1" Name="btnActualiser" Click="btnActualiser_Click" Width="100" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#A9CCE3"></Button>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Gerer les Abonnements" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Border Grid.Row="2" Grid.Column="0" Grid.RowSpan="4" BorderThickness="10" BorderBrush="Transparent">
+            <ListBox Name="lstBoxAbonnements" SelectionChanged="lstBoxAbonnements_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Id}" Width="120"></TextBlock>
+                            <TextBlock Text="{Binding Nom}"></TextBlock>
+                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+
+        <TextBlock Text="Information de selection" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="28"></TextBlock>
+
+        <Border Grid.Column="1" Grid.Row="3" BorderBrush="AntiqueWhite" BorderThickness="5" Padding="10">
+            <Grid Name="cadreSelection">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                
+                <TextBlock Name="txtId" Grid.Row="0" Grid.Column="0" FontSize="20"></TextBlock>
+                <TextBlock Name="txtNomAbo" Grid.Row="1" Grid.Column="0" FontSize="20"></TextBlock>
+                <Button Content="Modifier" Name="btnModifierNom" Click="btnModifierNom_Click" Grid.Row="1" Grid.Column="1" Width="150" Height="30" FontSize="15" BorderThickness="0" Background="Transparent"></Button>
+                <TextBlock Name="txtNbMaxFact" Grid.Row="2" Grid.Column="0" FontSize="20"></TextBlock>
+                <Button Content="Modifier" Name="btnModifierMaxFac" Click="btnModifierMaxFac_Click" Grid.Row="2" Grid.Column="1" Width="150" Height="30" FontSize="15" BorderThickness="0" Background="Transparent"></Button>
+                <TextBlock Name="txtNbMaxDevis" Grid.Row="3" Grid.Column="0" FontSize="20"></TextBlock>
+                <Button Content="Modifier" Name="btnModifierMaxDevis" Click="btnModifierMaxDevis_Click" Grid.Row="3" Grid.Column="1" Width="150" Height="30" FontSize="15" BorderThickness="0" Background="Transparent"></Button>
+                <TextBlock Name="txtPrix" Grid.Row="4" Grid.Column="0" FontSize="20"></TextBlock>
+                <Button Content="Modifier" Name="btnModifierPrix" Click="btnModifierPrix_Click" Grid.Row="4" Grid.Column="1" Width="150" Height="30" FontSize="15" BorderThickness="0" Background="Transparent"></Button>
+
+
+                <TextBlock Name="txtGlobale" Grid.Row="0" Grid.RowSpan="11" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontStyle="Italic"></TextBlock>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="4" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Name="btnSupprimer" Content="Supprimer" Click="btnSupprimer_Click" FontSize="15" Grid.Column="0" Width="150" Height="30" Background="#EDBB99"></Button>
+            <Button Name="btnAjouter" Content="Ajouter" Click="btnAjouter_Click" FontSize="15" Grid.Column="1" Width="150" Height="30" Background="#D1F2EB"></Button>
+        </Grid>
+        
+     
+
+
+    </Grid>
+</Page>

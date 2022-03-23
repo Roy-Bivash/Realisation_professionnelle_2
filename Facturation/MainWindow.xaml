@@ -1,0 +1,43 @@
+﻿<Window x:Class="Facturation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Facturation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="500" Background="AliceBlue" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Connexion" FontSize="50" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Identifiant" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+        <TextBox Name="txtIdentifiant" Grid.Row="4" Grid.Column="1" Margin="10" FontSize="16" Padding="2"></TextBox>
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="Mots de de passe" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+        <TextBox Name="txtMDP" Grid.Row="6" Grid.Column="1" Margin="10" FontSize="16" Padding="2" TextChanged="txtMDP_TextChanged"></TextBox>
+        <TextBlock Name="capLock" Grid.Row="6" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+
+        <Border Grid.Row="8" Grid.Column="1" CornerRadius="8" Height="40" Width="200" Background="AliceBlue" BorderBrush="#5DADE2" BorderThickness="3" >
+            <Button Name="btnConnexion" Click="btnConnexion_Click" Content="Se Connecter" Background="Transparent" BorderThickness="0" Foreground="#154360" FontSize="20"></Button>
+        </Border>
+        <Border Grid.Row="9" Grid.Column="1" CornerRadius="8" Height="35" Width="100" Background="AliceBlue" BorderBrush="#C0392B" BorderThickness="3" >
+            <Button Name="btnAnnuler" Click="btnAnnuler_Click" Content="Annuler" Background="Transparent" BorderThickness="0" Foreground="#C0392B" FontSize="20"></Button>
+        </Border>
+    </Grid>
+</Window>
